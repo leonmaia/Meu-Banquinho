@@ -43,7 +43,7 @@
     NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
 
 
-    [newManagedObject setValue:[DateFormatter formataData] forKey:@"timeStamp"];
+    [newManagedObject setValue:[DateFormatter formataData:[NSDate date]] forKey:@"timeStamp"];
     NSLog(@"%@",[NSDate date]);
     
     NSError *error = nil;

@@ -10,13 +10,20 @@
 
 @implementation DateFormatter
 
-+ (NSString*)formataData
++ (NSString*)formataData:(NSDate*)data
 {
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"             HH:mm dd-MM-yyyy"];
-    NSString *dateString=[dateFormat stringFromDate:[NSDate date]];
+
+    return [dateFormat stringFromDate:data];
+}
+
++ (NSDate*)converteParaData:(NSString*)data
+{
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"             HH:mm dd-MM-yyyy"];
     
-    return dateString;
+    return [dateFormat dateFromString: data];
 }
 
 @end

@@ -7,12 +7,10 @@
 //
 
 #import "DetailViewController.h"
-#import "MasterViewController.h"
 
 @interface DetailViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 @end
-
 
 @implementation DetailViewController
 @synthesize managedObjectContext;
@@ -20,13 +18,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    mutableFetchResults = [[NSMutableArray alloc] init];
     NSError *error;
     if (![[self fetchedResultsController] performFetch:&error]) {
         // Handle error
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
     }
-    
-    NSLog(@"%d objects fetched", [[_fetchedResultsController fetchedObjects] count]);
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -34,7 +31,6 @@
 //    [self fetchRecords];
     // Deleta o cache do fetchedresults!
 //    [NSFetchedResultsController deleteCacheWithName:nil];
-    [super viewWillAppear:animated];
 }
 
 #pragma mark - Table View
@@ -99,7 +95,7 @@
     }
     
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event"  inManagedObjectContext:self.managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:self.managedObjectContext];
     [request setEntity:entity];
     
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeStamp" ascending:YES];
@@ -114,45 +110,6 @@
     _fetchedResultsController.delegate = self;
     return _fetchedResultsController;
 }
-//
-//- (NSFetchedResultsController *)fetchedResultsController
-//{
-//    
-//    
-//    if (_fetchedResultsController != nil) {
-//        return _fetchedResultsController;
-//    }
-//    
-//    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-//    // Edit the entity name as appropriate.
-//    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:managedObjectContext];
-//    [fetchRequest setEntity:entity];
-//    
-//    // Set the batch size to a suitable number.
-//    [fetchRequest setFetchBatchSize:20];
-//    
-//    // Edit the sort key as appropriate.
-//    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeStamp" ascending:NO];
-//    NSArray *sortDescriptors = @[sortDescriptor];
-//    
-//    [fetchRequest setSortDescriptors:sortDescriptors];
-//    
-//    // Edit the section name key path and cache name if appropriate.
-//    // nil for section name key path means "no sections".
-//    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Master"];
-//    aFetchedResultsController.delegate = self;
-//    self.fetchedResultsController = aFetchedResultsController;
-//    
-//	NSError *error = nil;
-//	if (![self.fetchedResultsController performFetch:&error]) {
-//        // Replace this implementation with code to handle the error appropriately.
-//        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-//	    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-//	    abort();
-//	}
-//    
-//    return _fetchedResultsController;
-//}
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
 {
@@ -202,23 +159,18 @@
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
     [self.tableView endUpdates];
-}
 
-/*
- // Implementing the above methods to update the table view in response to individual changes may have performance implications if a large number of changes are made simultaneously. If this proves to be an issue, you can instead just implement controllerDidChangeContent: which notifies the delegate that all section and object changes have been processed.
- 
- - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
- {
- // In the simplest, most efficient, case, reload the table view.
- [self.tableView reloadData];
- }
- */
+//    se tiver dando trabalho pra atualizar...
+//    [self.tableView reloadData];
+    
+}
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-
-    cell.textLabel.text = [NSString stringWithFormat:[[object valueForKey:@"timeStamp"] description], @"Entrada"];
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%@",[[object valueForKey:@"timeStamp"] description]];
+    [mutableFetchResults addObject:[[object valueForKey:@"timeStamp"] description]];
     
 }
 - (void)didReceiveMemoryWarning
