@@ -28,12 +28,16 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bg.gif" translatesAutoresizingMaskIntoConstraints="NO" id="B5h-bV-LYc"/>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cR9-C7-oMy">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="5cc-dy-mXr"/>
+                                    <constraint firstAttribute="height" constant="64" id="aze-Bo-cph"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="checkmark-circle.png">
+                                <state key="normal" image="checkmark-circle@2x.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="highlighted" image="checkmark-circle2.png">
+                                <state key="highlighted" image="checkmark-circle2-pressed@2x.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -60,15 +64,15 @@
                         <constraints>
                             <constraint firstItem="lwo-oy-cmT" firstAttribute="trailing" secondItem="Bsq-Kp-Eoa" secondAttribute="trailing" type="default" id="1HJ-Be-Y1h"/>
                             <constraint firstItem="B5h-bV-LYc" firstAttribute="top" secondItem="Bsq-Kp-Eoa" secondAttribute="top" type="default" id="DLR-Df-erY"/>
+                            <constraint firstItem="cR9-C7-oMy" firstAttribute="centerX" secondItem="kby-ao-gHo" secondAttribute="centerX" type="default" id="DXT-Pz-ccW"/>
                             <constraint firstItem="kby-ao-gHo" firstAttribute="centerX" secondItem="lwo-oy-cmT" secondAttribute="centerX" type="default" id="Nf4-ym-aqJ"/>
-                            <constraint firstItem="kby-ao-gHo" firstAttribute="centerX" secondItem="cR9-C7-oMy" secondAttribute="centerX" type="default" id="RfO-7G-GV7"/>
+                            <constraint firstItem="cR9-C7-oMy" firstAttribute="centerY" secondItem="B5h-bV-LYc" secondAttribute="centerY" type="default" id="T6Q-xL-IUC"/>
                             <constraint firstItem="kby-ao-gHo" firstAttribute="centerY" secondItem="lwo-oy-cmT" secondAttribute="centerY" type="default" id="V0k-23-pgM"/>
                             <constraint firstItem="B5h-bV-LYc" firstAttribute="trailing" secondItem="Bsq-Kp-Eoa" secondAttribute="trailing" type="default" id="e1G-tT-xP1"/>
                             <constraint firstItem="lwo-oy-cmT" firstAttribute="top" secondItem="Bsq-Kp-Eoa" secondAttribute="top" type="default" id="eLt-we-L3P"/>
                             <constraint firstItem="B5h-bV-LYc" firstAttribute="leading" secondItem="Bsq-Kp-Eoa" secondAttribute="leading" type="default" id="f5F-2N-fIA"/>
                             <constraint firstItem="B5h-bV-LYc" firstAttribute="bottom" secondItem="Bsq-Kp-Eoa" secondAttribute="bottom" type="default" id="oTW-ep-Rvf"/>
                             <constraint firstItem="lwo-oy-cmT" firstAttribute="leading" secondItem="Bsq-Kp-Eoa" secondAttribute="leading" type="default" id="vPH-cz-aR2"/>
-                            <constraint firstItem="B5h-bV-LYc" firstAttribute="centerY" secondItem="cR9-C7-oMy" secondAttribute="centerY" type="default" id="vdt-QP-ohh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Meu Banquinho" id="BLl-ey-Ngp"/>
@@ -102,8 +106,8 @@
     </scenes>
     <resources>
         <image name="bg.gif" width="640" height="1096"/>
-        <image name="checkmark-circle.png" width="64" height="64"/>
-        <image name="checkmark-circle2.png" width="64" height="64"/>
+        <image name="checkmark-circle2-pressed@2x.png" width="128" height="128"/>
+        <image name="checkmark-circle@2x.png" width="128" height="128"/>
         <image name="menubar@2x.png" width="640" height="88"/>
     </resources>
     <classes>
@@ -113,13 +117,15 @@
         <class className="JASidePanelController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/JASidePanelController.h"/>
         </class>
-        <class className="MasterViewController" superclassName="UIViewController">
+        <class className="MasterViewController" superclassName="MasterViewControllerSuperClass">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
             <relationships>
-                <relationship kind="action" name="buttonPressed:"/>
                 <relationship kind="action" name="inserirHorario:"/>
                 <relationship kind="outlet" name="baterPonto" candidateClass="UIButton"/>
             </relationships>
+        </class>
+        <class className="MasterViewControllerSuperClass" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewControllerSuperClass.h"/>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>

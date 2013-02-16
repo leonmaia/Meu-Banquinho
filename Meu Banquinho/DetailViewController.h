@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MasterViewController.h"
+#import "MasterViewControllerSuperClass.h"
 
-@interface DetailViewController : UITableViewController<NSFetchedResultsControllerDelegate>{
+@interface DetailViewController : UITableViewController<NSFetchedResultsControllerDelegate>
+{
         NSMutableArray *mutableFetchResults;
-    int i;
 }
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;

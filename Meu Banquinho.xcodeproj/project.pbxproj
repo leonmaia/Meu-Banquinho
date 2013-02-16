@@ -16,15 +16,15 @@
 		F7566BE116CFC2DB007D521E /* DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F7566BDF16CFC2DB007D521E /* DateFormatter.m */; };
 		F7566BE516CFDCEF007D521E /* DateComparer.m in Sources */ = {isa = PBXBuildFile; fileRef = F7566BE416CFDCEF007D521E /* DateComparer.m */; };
 		F7566BE616CFDCEF007D521E /* DateComparer.m in Sources */ = {isa = PBXBuildFile; fileRef = F7566BE416CFDCEF007D521E /* DateComparer.m */; };
-		F7566BE916CFEF1D007D521E /* checkmark-circle.png in Resources */ = {isa = PBXBuildFile; fileRef = F7566BE816CFEF1D007D521E /* checkmark-circle.png */; };
-		F7566BEA16CFEF1D007D521E /* checkmark-circle.png in Resources */ = {isa = PBXBuildFile; fileRef = F7566BE816CFEF1D007D521E /* checkmark-circle.png */; };
-		F7566BEC16CFEF90007D521E /* checkmark-circle2.png in Resources */ = {isa = PBXBuildFile; fileRef = F7566BEB16CFEF90007D521E /* checkmark-circle2.png */; };
-		F7566BED16CFEF90007D521E /* checkmark-circle2.png in Resources */ = {isa = PBXBuildFile; fileRef = F7566BEB16CFEF90007D521E /* checkmark-circle2.png */; };
 		F7566BF216CFF4D6007D521E /* bg.gif in Resources */ = {isa = PBXBuildFile; fileRef = F7566BF116CFF4D6007D521E /* bg.gif */; };
 		F7566BF316CFF4D6007D521E /* bg.gif in Resources */ = {isa = PBXBuildFile; fileRef = F7566BF116CFF4D6007D521E /* bg.gif */; };
 		F7566BFB16CFF9BB007D521E /* menubar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7566BFA16CFF9BB007D521E /* menubar@2x.png */; };
 		F7566BFC16CFF9BB007D521E /* menubar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7566BFA16CFF9BB007D521E /* menubar@2x.png */; };
 		F7566BFF16D01DBA007D521E /* MasterViewControllerSuperClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F7566BFE16D01DBA007D521E /* MasterViewControllerSuperClass.m */; };
+		F7566C1E16D02F13007D521E /* checkmark-circle.png in Resources */ = {isa = PBXBuildFile; fileRef = F7566C1A16D02F13007D521E /* checkmark-circle.png */; };
+		F7566C1F16D02F13007D521E /* checkmark-circle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7566C1B16D02F13007D521E /* checkmark-circle@2x.png */; };
+		F7566C2016D02F13007D521E /* checkmark-circle2-pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7566C1C16D02F13007D521E /* checkmark-circle2-pressed@2x.png */; };
+		F7566C2116D02F13007D521E /* checkmark-circle2.png in Resources */ = {isa = PBXBuildFile; fileRef = F7566C1D16D02F13007D521E /* checkmark-circle2.png */; };
 		F7A1480016CF07390060BE69 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A147FF16CF07390060BE69 /* UIKit.framework */; };
 		F7A1480216CF07390060BE69 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A1480116CF07390060BE69 /* Foundation.framework */; };
 		F7A1480416CF07390060BE69 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A1480316CF07390060BE69 /* CoreGraphics.framework */; };
@@ -67,12 +67,14 @@
 		F7566BDF16CFC2DB007D521E /* DateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateFormatter.m; sourceTree = "<group>"; };
 		F7566BE316CFDCEF007D521E /* DateComparer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateComparer.h; sourceTree = "<group>"; };
 		F7566BE416CFDCEF007D521E /* DateComparer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateComparer.m; sourceTree = "<group>"; };
-		F7566BE816CFEF1D007D521E /* checkmark-circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark-circle.png"; sourceTree = "<group>"; };
-		F7566BEB16CFEF90007D521E /* checkmark-circle2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark-circle2.png"; sourceTree = "<group>"; };
 		F7566BF116CFF4D6007D521E /* bg.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bg.gif; sourceTree = "<group>"; };
 		F7566BFA16CFF9BB007D521E /* menubar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar@2x.png"; sourceTree = "<group>"; };
 		F7566BFD16D01DBA007D521E /* MasterViewControllerSuperClass.h */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewControllerSuperClass.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F7566BFE16D01DBA007D521E /* MasterViewControllerSuperClass.m */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewControllerSuperClass.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
+		F7566C1A16D02F13007D521E /* checkmark-circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark-circle.png"; sourceTree = "<group>"; };
+		F7566C1B16D02F13007D521E /* checkmark-circle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark-circle@2x.png"; sourceTree = "<group>"; };
+		F7566C1C16D02F13007D521E /* checkmark-circle2-pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark-circle2-pressed@2x.png"; sourceTree = "<group>"; };
+		F7566C1D16D02F13007D521E /* checkmark-circle2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark-circle2.png"; sourceTree = "<group>"; };
 		F7A147FC16CF07390060BE69 /* Meu Banquinho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meu Banquinho.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A147FF16CF07390060BE69 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F7A1480116CF07390060BE69 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -174,10 +176,12 @@
 		F7566BE716CFEF12007D521E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F7566C1A16D02F13007D521E /* checkmark-circle.png */,
+				F7566C1B16D02F13007D521E /* checkmark-circle@2x.png */,
+				F7566C1C16D02F13007D521E /* checkmark-circle2-pressed@2x.png */,
+				F7566C1D16D02F13007D521E /* checkmark-circle2.png */,
 				F7566BFA16CFF9BB007D521E /* menubar@2x.png */,
 				F7566BF116CFF4D6007D521E /* bg.gif */,
-				F7566BE816CFEF1D007D521E /* checkmark-circle.png */,
-				F7566BEB16CFEF90007D521E /* checkmark-circle2.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -347,10 +351,12 @@
 				F7A1481616CF07390060BE69 /* Default@2x.png in Resources */,
 				F7A1481816CF07390060BE69 /* Default-568h@2x.png in Resources */,
 				F7A1481B16CF07390060BE69 /* MainStoryboard.storyboard in Resources */,
-				F7566BE916CFEF1D007D521E /* checkmark-circle.png in Resources */,
-				F7566BEC16CFEF90007D521E /* checkmark-circle2.png in Resources */,
 				F7566BF216CFF4D6007D521E /* bg.gif in Resources */,
 				F7566BFB16CFF9BB007D521E /* menubar@2x.png in Resources */,
+				F7566C1E16D02F13007D521E /* checkmark-circle.png in Resources */,
+				F7566C1F16D02F13007D521E /* checkmark-circle@2x.png in Resources */,
+				F7566C2016D02F13007D521E /* checkmark-circle2-pressed@2x.png in Resources */,
+				F7566C2116D02F13007D521E /* checkmark-circle2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,8 +365,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7A1483716CF073A0060BE69 /* InfoPlist.strings in Resources */,
-				F7566BEA16CFEF1D007D521E /* checkmark-circle.png in Resources */,
-				F7566BED16CFEF90007D521E /* checkmark-circle2.png in Resources */,
 				F7566BF316CFF4D6007D521E /* bg.gif in Resources */,
 				F7566BFC16CFF9BB007D521E /* menubar@2x.png in Resources */,
 			);
