@@ -10,7 +10,8 @@
 
 #import <CoreData/CoreData.h>
 
-@interface MasterViewController : UIViewController <NSFetchedResultsControllerDelegate>{
+@interface MasterViewController : UIViewController <NSFetchedResultsControllerDelegate>
+{
 
     IBOutlet UIButton *baterPonto;
 }

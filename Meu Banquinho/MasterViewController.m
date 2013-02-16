@@ -11,7 +11,8 @@
 
 @interface MasterViewController ()
 
--(IBAction)inserirHorario:(id)sender;
+- (IBAction)inserirHorario:(id)sender;
+- (IBAction)buttonPressed:(id)sender;
 @end
 
 @implementation MasterViewController
@@ -43,7 +44,6 @@
     [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
     NSLog(@"%@",[NSDate date]);
     
-    // Salva o context.
     NSError *error = nil;
     if (![context save:&error]) {
         // Replace this implementation with code to handle the error appropriately.
@@ -52,6 +52,22 @@
         abort();
     }
 }
+
+- (IBAction)buttonPressed:(id)sender
+{
+    [self performSegueWithIdentifier:@"MySegue" sender:sender];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSString *segueIdentifier = [segue identifier];
+    if ([segueIdentifier isEqualToString:@"MySegue"])
+    {
+        DetailViewController *detailViewController = [segue destinationViewController];
+        detailViewController.managedObjectContext = self.managedObjectContext;
+    }
+}
+
 #pragma mark - Fetched results controller
 
 - (NSFetchedResultsController *)fetchedResultsController
@@ -85,9 +101,10 @@
         // Replace this implementation with code to handle the error appropriately.
         // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
 	    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+
 	    abort();
 	}
-    
+
     return _fetchedResultsController;
 }
 

@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailViewController : UITableViewController<NSFetchedResultsControllerDelegate>
+@interface DetailViewController : UITableViewController<NSFetchedResultsControllerDelegate>{
+        NSMutableArray *mutableFetchResults;
+}
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
 
 @end
