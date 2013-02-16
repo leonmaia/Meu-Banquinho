@@ -26,6 +26,7 @@
 
 - (void)viewDidLoad
 {
+
     [super viewDidLoad];
 }
 
@@ -34,20 +35,15 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (NSString*)formataData
-{
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"HH:mm:ss dd-MM-yyyy"];
-    NSString *dateString=[dateFormat stringFromDate:[NSDate date]];
 
-    return dateString;
-}
 -(IBAction)inserirHorario:(id)sender
 {
     NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
     NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
     NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
-    [newManagedObject setValue:[self formataData] forKey:@"timeStamp"];
+
+
+    [newManagedObject setValue:[DateFormatter formataData] forKey:@"timeStamp"];
     NSLog(@"%@",[NSDate date]);
     
     NSError *error = nil;
@@ -61,16 +57,6 @@
 - (IBAction)buttonPressed:(id)sender
 {
     [self performSegueWithIdentifier:@"MySegue" sender:sender];
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    NSString *segueIdentifier = [segue identifier];
-    if ([segueIdentifier isEqualToString:@"MySegue"])
-    {
-        DetailViewController *detailViewController = [segue destinationViewController];
-        detailViewController.managedObjectContext = self.managedObjectContext;
-    }
 }
 
 #pragma mark - Fetched results controller

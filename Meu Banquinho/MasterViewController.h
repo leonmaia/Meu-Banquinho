@@ -10,6 +10,7 @@
 
 #import <CoreData/CoreData.h>
 
+#import "DateFormatter.h"
 @interface MasterViewController : UIViewController <NSFetchedResultsControllerDelegate>
 {
 
