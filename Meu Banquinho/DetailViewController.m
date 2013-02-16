@@ -53,8 +53,7 @@
         
         NSError *error = nil;
         if (![context save:&error]) {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            //tratar erro
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
@@ -66,15 +65,6 @@
     // The table view should not be re-orderable.
     return NO;
 }
-//
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-//        NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-//        [[segue destinationViewController] setDetailItem:object];
-//    }
-//}
 
 #pragma mark - Fetched results controller
 
