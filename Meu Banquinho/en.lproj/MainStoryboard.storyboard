@@ -60,8 +60,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="lZC-HC-WC1" firstAttribute="leading" secondItem="Bsq-Kp-Eoa" secondAttribute="leading" constant="111" id="1IP-Mj-HNV"/>
-                            <constraint firstAttribute="bottom" secondItem="lZC-HC-WC1" secondAttribute="bottom" constant="111" id="lWs-LZ-1Hg"/>
+                            <constraint firstAttribute="bottom" secondItem="lZC-HC-WC1" secondAttribute="bottom" constant="107" id="4G2-lh-2Tw"/>
+                            <constraint firstItem="lZC-HC-WC1" firstAttribute="leading" secondItem="cR9-C7-oMy" secondAttribute="leading" type="default" id="kFa-ku-b1o"/>
                             <constraint firstItem="cR9-C7-oMy" firstAttribute="centerX" secondItem="Bsq-Kp-Eoa" secondAttribute="centerX" type="default" id="pHe-m1-5JN"/>
                             <constraint firstItem="cR9-C7-oMy" firstAttribute="top" secondItem="Bsq-Kp-Eoa" secondAttribute="top" constant="183" id="tBh-dz-4dN"/>
                         </constraints>

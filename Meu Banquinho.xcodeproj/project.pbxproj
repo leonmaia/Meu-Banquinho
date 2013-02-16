@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F7566BD616CFB5FE007D521E /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7566BD516CFB5FE007D521E /* JASidePanelController.m */; };
+		F7566BD716CFB5FE007D521E /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7566BD516CFB5FE007D521E /* JASidePanelController.m */; };
 		F7A1480016CF07390060BE69 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A147FF16CF07390060BE69 /* UIKit.framework */; };
 		F7A1480216CF07390060BE69 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A1480116CF07390060BE69 /* Foundation.framework */; };
 		F7A1480416CF07390060BE69 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A1480316CF07390060BE69 /* CoreGraphics.framework */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F7566BD416CFB5FE007D521E /* JASidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JASidePanelController.h; sourceTree = "<group>"; };
+		F7566BD516CFB5FE007D521E /* JASidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JASidePanelController.m; sourceTree = "<group>"; };
 		F7A147FC16CF07390060BE69 /* Meu Banquinho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meu Banquinho.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A147FF16CF07390060BE69 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F7A1480116CF07390060BE69 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -94,6 +98,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F7566BD116CFB5A8007D521E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F7A1481F16CF07390060BE69 /* MasterViewController.h */,
+				F7A1482016CF07390060BE69 /* MasterViewController.m */,
+				F7A1482216CF07390060BE69 /* DetailViewController.h */,
+				F7A1482316CF07390060BE69 /* DetailViewController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		F7566BD216CFB5C0007D521E /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				F7A1481016CF07390060BE69 /* AppDelegate.h */,
+				F7A1481116CF07390060BE69 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		F7566BD316CFB5E8007D521E /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				F7566BD416CFB5FE007D521E /* JASidePanelController.h */,
+				F7566BD516CFB5FE007D521E /* JASidePanelController.m */,
+			);
+			name = Container;
+			sourceTree = "<group>";
+		};
 		F7A147F316CF07390060BE69 = {
 			isa = PBXGroup;
 			children = (
@@ -128,13 +161,10 @@
 		F7A1480716CF07390060BE69 /* Meu Banquinho */ = {
 			isa = PBXGroup;
 			children = (
-				F7A1481016CF07390060BE69 /* AppDelegate.h */,
-				F7A1481116CF07390060BE69 /* AppDelegate.m */,
+				F7566BD316CFB5E8007D521E /* Container */,
+				F7566BD216CFB5C0007D521E /* AppDelegate */,
+				F7566BD116CFB5A8007D521E /* Classes */,
 				F7A1481916CF07390060BE69 /* MainStoryboard.storyboard */,
-				F7A1481F16CF07390060BE69 /* MasterViewController.h */,
-				F7A1482016CF07390060BE69 /* MasterViewController.m */,
-				F7A1482216CF07390060BE69 /* DetailViewController.h */,
-				F7A1482316CF07390060BE69 /* DetailViewController.m */,
 				F7A1481C16CF07390060BE69 /* Meu_Banquinho.xcdatamodeld */,
 				F7A1480816CF07390060BE69 /* Supporting Files */,
 			);
@@ -289,6 +319,7 @@
 				F7A1481E16CF07390060BE69 /* Meu_Banquinho.xcdatamodeld in Sources */,
 				F7A1482116CF07390060BE69 /* MasterViewController.m in Sources */,
 				F7A1482416CF07390060BE69 /* DetailViewController.m in Sources */,
+				F7566BD616CFB5FE007D521E /* JASidePanelController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7A1483A16CF073A0060BE69 /* Meu_BanquinhoTests.m in Sources */,
+				F7566BD716CFB5FE007D521E /* JASidePanelController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +501,7 @@
 				F7A1483F16CF073A0060BE69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F7A1484016CF073A0060BE69 /* Build configuration list for PBXNativeTarget "Meu BanquinhoTests" */ = {
 			isa = XCConfigurationList;
@@ -477,6 +510,7 @@
 				F7A1484216CF073A0060BE69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
