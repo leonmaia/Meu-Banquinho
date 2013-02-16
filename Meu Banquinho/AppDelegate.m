@@ -7,8 +7,9 @@
 //
 
 #import "AppDelegate.h"
-
 #import "MasterViewController.h"
+#import "DetailViewController.h"
+#import "JASidePanelController.h"
 
 @implementation AppDelegate
 
@@ -18,10 +19,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    MasterViewController *controller = (MasterViewController *)navigationController.topViewController;
- 
+    JASidePanelController *navigationController = (JASidePanelController *)self.window.rootViewController;
+    MasterViewController *controller = (MasterViewController *)navigationController.centerPanel;
+    DetailViewController *detail = (DetailViewController*)navigationController.rightPanel;
+
     controller.managedObjectContext = self.managedObjectContext;
+    detail.managedObjectContext = self.managedObjectContext;
     
     return YES;
 }

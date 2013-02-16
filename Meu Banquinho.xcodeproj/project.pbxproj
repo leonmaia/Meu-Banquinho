@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		F7566BD616CFB5FE007D521E /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7566BD516CFB5FE007D521E /* JASidePanelController.m */; };
 		F7566BD716CFB5FE007D521E /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7566BD516CFB5FE007D521E /* JASidePanelController.m */; };
+		F7566BDA16CFB698007D521E /* SidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7566BD916CFB698007D521E /* SidePanelController.m */; };
+		F7566BDB16CFB698007D521E /* SidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7566BD916CFB698007D521E /* SidePanelController.m */; };
+		F7566BDD16CFB802007D521E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7566BDC16CFB802007D521E /* QuartzCore.framework */; };
 		F7A1480016CF07390060BE69 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A147FF16CF07390060BE69 /* UIKit.framework */; };
 		F7A1480216CF07390060BE69 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A1480116CF07390060BE69 /* Foundation.framework */; };
 		F7A1480416CF07390060BE69 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A1480316CF07390060BE69 /* CoreGraphics.framework */; };
@@ -44,6 +47,9 @@
 /* Begin PBXFileReference section */
 		F7566BD416CFB5FE007D521E /* JASidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JASidePanelController.h; sourceTree = "<group>"; };
 		F7566BD516CFB5FE007D521E /* JASidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JASidePanelController.m; sourceTree = "<group>"; };
+		F7566BD816CFB698007D521E /* SidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidePanelController.h; sourceTree = "<group>"; };
+		F7566BD916CFB698007D521E /* SidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidePanelController.m; sourceTree = "<group>"; };
+		F7566BDC16CFB802007D521E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F7A147FC16CF07390060BE69 /* Meu Banquinho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meu Banquinho.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A147FF16CF07390060BE69 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F7A1480116CF07390060BE69 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -77,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7566BDD16CFB802007D521E /* QuartzCore.framework in Frameworks */,
 				F7A1480016CF07390060BE69 /* UIKit.framework in Frameworks */,
 				F7A1480216CF07390060BE69 /* Foundation.framework in Frameworks */,
 				F7A1480416CF07390060BE69 /* CoreGraphics.framework in Frameworks */,
@@ -123,6 +130,8 @@
 			children = (
 				F7566BD416CFB5FE007D521E /* JASidePanelController.h */,
 				F7566BD516CFB5FE007D521E /* JASidePanelController.m */,
+				F7566BD816CFB698007D521E /* SidePanelController.h */,
+				F7566BD916CFB698007D521E /* SidePanelController.m */,
 			);
 			name = Container;
 			sourceTree = "<group>";
@@ -149,6 +158,7 @@
 		F7A147FE16CF07390060BE69 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F7566BDC16CFB802007D521E /* QuartzCore.framework */,
 				F7A147FF16CF07390060BE69 /* UIKit.framework */,
 				F7A1480116CF07390060BE69 /* Foundation.framework */,
 				F7A1480316CF07390060BE69 /* CoreGraphics.framework */,
@@ -320,6 +330,7 @@
 				F7A1482116CF07390060BE69 /* MasterViewController.m in Sources */,
 				F7A1482416CF07390060BE69 /* DetailViewController.m in Sources */,
 				F7566BD616CFB5FE007D521E /* JASidePanelController.m in Sources */,
+				F7566BDA16CFB698007D521E /* SidePanelController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +340,7 @@
 			files = (
 				F7A1483A16CF073A0060BE69 /* Meu_BanquinhoTests.m in Sources */,
 				F7566BD716CFB5FE007D521E /* JASidePanelController.m in Sources */,
+				F7566BDB16CFB698007D521E /* SidePanelController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
