@@ -34,14 +34,21 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (NSString*)formataData
+{
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"HH:mm:ss dd-MM-yyyy"];
+    NSString *dateString=[dateFormat stringFromDate:[NSDate date]];
 
+    return dateString;
+}
 -(IBAction)inserirHorario:(id)sender
 {
     NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
     NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
     NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
-   
-    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
+
+    [newManagedObject setValue:[self formataData] forKey:@"timeStamp"];
     NSLog(@"%@",[NSDate date]);
     
     NSError *error = nil;
