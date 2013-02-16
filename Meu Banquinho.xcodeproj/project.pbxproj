@@ -24,6 +24,7 @@
 		F7566BF316CFF4D6007D521E /* bg.gif in Resources */ = {isa = PBXBuildFile; fileRef = F7566BF116CFF4D6007D521E /* bg.gif */; };
 		F7566BFB16CFF9BB007D521E /* menubar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7566BFA16CFF9BB007D521E /* menubar@2x.png */; };
 		F7566BFC16CFF9BB007D521E /* menubar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7566BFA16CFF9BB007D521E /* menubar@2x.png */; };
+		F7566BFF16D01DBA007D521E /* MasterViewControllerSuperClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F7566BFE16D01DBA007D521E /* MasterViewControllerSuperClass.m */; };
 		F7A1480016CF07390060BE69 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A147FF16CF07390060BE69 /* UIKit.framework */; };
 		F7A1480216CF07390060BE69 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A1480116CF07390060BE69 /* Foundation.framework */; };
 		F7A1480416CF07390060BE69 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A1480316CF07390060BE69 /* CoreGraphics.framework */; };
@@ -70,6 +71,8 @@
 		F7566BEB16CFEF90007D521E /* checkmark-circle2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark-circle2.png"; sourceTree = "<group>"; };
 		F7566BF116CFF4D6007D521E /* bg.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bg.gif; sourceTree = "<group>"; };
 		F7566BFA16CFF9BB007D521E /* menubar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar@2x.png"; sourceTree = "<group>"; };
+		F7566BFD16D01DBA007D521E /* MasterViewControllerSuperClass.h */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewControllerSuperClass.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
+		F7566BFE16D01DBA007D521E /* MasterViewControllerSuperClass.m */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewControllerSuperClass.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F7A147FC16CF07390060BE69 /* Meu Banquinho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meu Banquinho.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A147FF16CF07390060BE69 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F7A1480116CF07390060BE69 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -125,15 +128,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F7566BD116CFB5A8007D521E /* ViewControllers */ = {
+		F7566BD116CFB5A8007D521E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F7566C0016D01DE7007D521E /* SuperClasses */,
 				F7A1481F16CF07390060BE69 /* MasterViewController.h */,
 				F7A1482016CF07390060BE69 /* MasterViewController.m */,
 				F7A1482216CF07390060BE69 /* DetailViewController.h */,
 				F7A1482316CF07390060BE69 /* DetailViewController.m */,
 			);
-			name = ViewControllers;
+			name = Classes;
 			sourceTree = "<group>";
 		};
 		F7566BD216CFB5C0007D521E /* AppDelegate */ = {
@@ -178,6 +182,15 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		F7566C0016D01DE7007D521E /* SuperClasses */ = {
+			isa = PBXGroup;
+			children = (
+				F7566BFD16D01DBA007D521E /* MasterViewControllerSuperClass.h */,
+				F7566BFE16D01DBA007D521E /* MasterViewControllerSuperClass.m */,
+			);
+			name = SuperClasses;
+			sourceTree = "<group>";
+		};
 		F7A147F316CF07390060BE69 = {
 			isa = PBXGroup;
 			children = (
@@ -217,7 +230,7 @@
 				F7566BE216CFD14D007D521E /* Ajudinha */,
 				F7566BD316CFB5E8007D521E /* Container */,
 				F7566BD216CFB5C0007D521E /* AppDelegate */,
-				F7566BD116CFB5A8007D521E /* ViewControllers */,
+				F7566BD116CFB5A8007D521E /* Classes */,
 				F7A1481916CF07390060BE69 /* MainStoryboard.storyboard */,
 				F7A1481C16CF07390060BE69 /* Meu_Banquinho.xcdatamodeld */,
 				F7A1480816CF07390060BE69 /* Supporting Files */,
@@ -385,6 +398,7 @@
 				F7566BDA16CFB698007D521E /* SidePanelController.m in Sources */,
 				F7566BE016CFC2DB007D521E /* DateFormatter.m in Sources */,
 				F7566BE516CFDCEF007D521E /* DateComparer.m in Sources */,
+				F7566BFF16D01DBA007D521E /* MasterViewControllerSuperClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
