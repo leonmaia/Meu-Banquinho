@@ -59,25 +59,93 @@
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="1" green="0.94186929016035315" blue="0.985647162317694" alpha="0.38" colorSpace="calibratedRGB"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxH-pK-HLL" userLabel="Entrada - Manha">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="htt-ru-GcY"/>
+                                    <constraint firstAttribute="width" constant="207" id="yvf-ye-goo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eS7-vS-yTm" userLabel="Saida - Almoco">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="n9e-wb-gRi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XwN-ez-Pcl" userLabel="Entrada - Almoco">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="fmB-tu-LRN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0V-6o-875" userLabel="Saida - Fim">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="gba-Kl-Lp0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="lwo-oy-cmT" firstAttribute="trailing" secondItem="Bsq-Kp-Eoa" secondAttribute="trailing" type="default" id="1HJ-Be-Y1h"/>
+                            <constraint firstItem="eS7-vS-yTm" firstAttribute="trailing" secondItem="XwN-ez-Pcl" secondAttribute="trailing" type="default" id="24U-az-l6r"/>
+                            <constraint firstItem="vxH-pK-HLL" firstAttribute="trailing" secondItem="eS7-vS-yTm" secondAttribute="trailing" type="default" id="5dd-cn-tiL"/>
+                            <constraint firstAttribute="bottom" secondItem="cR9-C7-oMy" secondAttribute="bottom" constant="95" id="7fI-ZW-Yky"/>
+                            <constraint firstItem="X0V-6o-875" firstAttribute="trailing" secondItem="XwN-ez-Pcl" secondAttribute="trailing" type="default" id="A40-HQ-DxB"/>
                             <constraint firstItem="B5h-bV-LYc" firstAttribute="top" secondItem="Bsq-Kp-Eoa" secondAttribute="top" type="default" id="DLR-Df-erY"/>
-                            <constraint firstItem="cR9-C7-oMy" firstAttribute="centerX" secondItem="kby-ao-gHo" secondAttribute="centerX" type="default" id="DXT-Pz-ccW"/>
+                            <constraint firstItem="X0V-6o-875" firstAttribute="top" secondItem="XwN-ez-Pcl" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="FLd-8c-JLq"/>
+                            <constraint firstItem="X0V-6o-875" firstAttribute="leading" secondItem="XwN-ez-Pcl" secondAttribute="leading" type="default" id="Heb-jK-Ogv"/>
+                            <constraint firstItem="XwN-ez-Pcl" firstAttribute="top" secondItem="eS7-vS-yTm" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Ign-gm-RgC"/>
+                            <constraint firstItem="vxH-pK-HLL" firstAttribute="top" secondItem="Bsq-Kp-Eoa" secondAttribute="top" constant="106" id="M9G-8z-RqR"/>
                             <constraint firstItem="kby-ao-gHo" firstAttribute="centerX" secondItem="lwo-oy-cmT" secondAttribute="centerX" type="default" id="Nf4-ym-aqJ"/>
-                            <constraint firstItem="cR9-C7-oMy" firstAttribute="centerY" secondItem="B5h-bV-LYc" secondAttribute="centerY" type="default" id="T6Q-xL-IUC"/>
                             <constraint firstItem="kby-ao-gHo" firstAttribute="centerY" secondItem="lwo-oy-cmT" secondAttribute="centerY" type="default" id="V0k-23-pgM"/>
+                            <constraint firstItem="eS7-vS-yTm" firstAttribute="top" secondItem="vxH-pK-HLL" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Wlf-Je-2SL"/>
                             <constraint firstItem="B5h-bV-LYc" firstAttribute="trailing" secondItem="Bsq-Kp-Eoa" secondAttribute="trailing" type="default" id="e1G-tT-xP1"/>
+                            <constraint firstItem="vxH-pK-HLL" firstAttribute="centerX" secondItem="kby-ao-gHo" secondAttribute="centerX" type="default" id="eAr-2k-Jgk"/>
+                            <constraint firstItem="X0V-6o-875" firstAttribute="centerX" secondItem="cR9-C7-oMy" secondAttribute="centerX" type="default" id="eDk-K4-G5y"/>
                             <constraint firstItem="lwo-oy-cmT" firstAttribute="top" secondItem="Bsq-Kp-Eoa" secondAttribute="top" type="default" id="eLt-we-L3P"/>
                             <constraint firstItem="B5h-bV-LYc" firstAttribute="leading" secondItem="Bsq-Kp-Eoa" secondAttribute="leading" type="default" id="f5F-2N-fIA"/>
+                            <constraint firstItem="eS7-vS-yTm" firstAttribute="leading" secondItem="XwN-ez-Pcl" secondAttribute="leading" type="default" id="hCa-XP-8YY"/>
                             <constraint firstItem="B5h-bV-LYc" firstAttribute="bottom" secondItem="Bsq-Kp-Eoa" secondAttribute="bottom" type="default" id="oTW-ep-Rvf"/>
                             <constraint firstItem="lwo-oy-cmT" firstAttribute="leading" secondItem="Bsq-Kp-Eoa" secondAttribute="leading" type="default" id="vPH-cz-aR2"/>
+                            <constraint firstItem="vxH-pK-HLL" firstAttribute="leading" secondItem="eS7-vS-yTm" secondAttribute="leading" type="default" id="vPm-uP-TMj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Meu Banquinho" id="BLl-ey-Ngp"/>
                     <connections>
                         <outlet property="baterPonto" destination="cR9-C7-oMy" id="yFE-Pe-rQg"/>
+                        <outlet property="primeiraBatida" destination="vxH-pK-HLL" id="6A2-CO-Ftw"/>
+                        <outlet property="quartaBatida" destination="X0V-6o-875" id="rFQ-An-AtM"/>
+                        <outlet property="segundaBatida" destination="eS7-vS-yTm" id="gef-df-HoV"/>
+                        <outlet property="terceiraBatida" destination="XwN-ez-Pcl" id="WZb-A4-Vsm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hy-NE-bpT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -122,6 +190,10 @@
             <relationships>
                 <relationship kind="action" name="inserirHorario:"/>
                 <relationship kind="outlet" name="baterPonto" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="primeiraBatida" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="quartaBatida" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="segundaBatida" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="terceiraBatida" candidateClass="UIButton"/>
             </relationships>
         </class>
         <class className="MasterViewControllerSuperClass" superclassName="UIViewController">

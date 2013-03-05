@@ -16,6 +16,16 @@
 @interface MasterViewController : MasterViewControllerSuperClass
 {
     IBOutlet UIButton *baterPonto;
+    
+    IBOutlet UIButton *primeiraBatida;
+    
+    IBOutlet UIButton *segundaBatida;
+    
+    IBOutlet UIButton *terceiraBatida;
+    
+    IBOutlet UIButton *quartaBatida;
+    
+    
 }
 @property (strong, nonatomic) IBOutlet UIButton *baterPonto;
 
