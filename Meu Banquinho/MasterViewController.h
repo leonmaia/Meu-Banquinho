@@ -11,9 +11,7 @@
 #import <CoreData/CoreData.h>
 
 #import "DateFormatter.h"
-#import "MasterViewControllerSuperClass.h"
-
-@interface MasterViewController : MasterViewControllerSuperClass
+@interface MasterViewController : UIViewController <NSFetchedResultsControllerDelegate>
 {
     IBOutlet UIButton *baterPonto;
     
@@ -25,8 +23,9 @@
     
     IBOutlet UIButton *quartaBatida;
     
-    
 }
 @property (strong, nonatomic) IBOutlet UIButton *baterPonto;
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end
