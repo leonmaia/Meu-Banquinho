@@ -26,6 +26,13 @@
     }
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    //    [self fetchRecords];
+    // Deleta o cache do fetchedresults!
+    //    [NSFetchedResultsController deleteCacheWithName:nil];
+}
+
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -80,6 +87,30 @@
 
 #pragma mark - Fetched results controller
 
+
+- (NSFetchedResultsController *)fetchedResultsController {
+    
+    if (_fetchedResultsController != nil) {
+        return _fetchedResultsController;
+    }
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:self.managedObjectContext];
+    [request setEntity:entity];
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeStamp" ascending:YES];
+    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+    [request setSortDescriptors:sortDescriptors];
+    
+    NSFetchedResultsController *theFetchedResultsController =
+    [[NSFetchedResultsController alloc] initWithFetchRequest:request
+                                        managedObjectContext:managedObjectContext sectionNameKeyPath:nil
+                                                   cacheName:nil];
+    self.fetchedResultsController = theFetchedResultsController;
+    _fetchedResultsController.delegate = self;
+    return _fetchedResultsController;
+}
+
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
 {
     [self.tableView beginUpdates];
@@ -128,9 +159,9 @@
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
     [self.tableView endUpdates];
-
-//    se tiver dando trabalho pra atualizar...
-//    [self.tableView reloadData];
+    
+    //    se tiver dando trabalho pra atualizar...
+    //    [self.tableView reloadData];
     
 }
 
@@ -142,7 +173,6 @@
     [mutableFetchResults addObject:[[object valueForKey:@"timeStamp"] description]];
     
 }
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

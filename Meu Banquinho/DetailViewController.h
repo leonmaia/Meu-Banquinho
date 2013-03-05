@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MasterViewControllerSuperClass.h"
+#import "MasterViewController.h"
 
 @interface DetailViewController : UITableViewController<NSFetchedResultsControllerDelegate>
 {
